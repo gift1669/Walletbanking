@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 Page Web App</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Add this script to include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css" </head>
+
+<body>
+  <!-- Page 1: Login -->
+  <div class="page" id="page1">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <!-- Page 2: Dashboard -->
+  <div class="page" id="page2">
+    <div class="dashboard">
+      <div class="navigator">
+        <button id="walletBtn">Wallet</button>
+        <button id="securityBtn">Security</button>
+        <button id="loanBtn">Loan</button>
+        <button id="debitCardBtn">Debit Card</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+      <div class="avatar">
+            <img src="avatar.png" alt="User Avatar">
+      </div>
+      <div class="funds-analysis">
+        <h3>Funds Analysis</h3>
+        <canvas id="fundsChart"></canvas>
+        <p>Balance: <span id="balance">$15000</span></p>
+        
+        <button id="refreshBalanceBtn">Refresh Balance</button>
+      </div>
+      <button id="transferBtn">Transfer Funds</button>
+    </div>
+  </div>
+  
+   <!-- Page 3: Transfer Funds -->
+  <div class="page" id="page3">
+    <div class="transfer">
+      <h3>Transfer Funds</h3>
+      <div class="transfer-form">
+        <label for="transferAmount">Amount:</label>
+        <input type="number" id="transferAmount" placeholder="Enter amount">
+      </div>
+      <button id="sendBtn">Send Fund</button>
+      <button id="backBtn">Back</button> <!-- Back button added here -->
+    </div>
+  </div>
+   <!-- Page 4: Transfer Complete -->
+  <div class="page" id="page4">
+    <div class="transfer-complete">
+      <div class="arrow-container">
+        <button id="backToTransferBtn" class="arrow-btn">&#8592;</button> <!-- Back arrow button -->
+      </div>
+      <h3>Successful</h3>
+      <img src="thumbs-up.png" alt="Thumbs Up">
+    </div>
+  </div>
